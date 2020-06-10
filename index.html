@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Poppins:300,400,600,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
+  <style>
+    .preloader {
+      /*фиксированное позиционирование*/
+      position: fixed;
+      /* координаты положения */
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* фоновый цвет элемента */
+      background: #e0e0e0;
+      /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+      z-index: 1001;
+    }
+
+    .preloader__row {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 70px;
+      height: 70px;
+      margin-top: -35px;
+      margin-left: -35px;
+      text-align: center;
+      animation: preloader-rotate 2s infinite linear;
+    }
+
+    .preloader__item {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      background-color: #337ab7;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      animation: preloader-bounce 2s infinite ease-in-out;
+    }
+
+    .preloader__item:last-child {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s;
+    }
+
+    @keyframes preloader-rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes preloader-bounce {
+
+      0%,
+      100% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    .loaded_hiding .preloader {
+      transition: 0.3s opacity;
+      opacity: 0;
+    }
+
+    .loaded .preloader {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/baguetteBox.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Creative Agency</title>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+  <header class="main-header">
+
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""><span>BlueRex</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav text-center ml-auto">
+          <li class="nav-item  active">
+            <a class="nav-link " href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Faq</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main-header__text">
+      <h3>We are best and creative agency</h3>
+      <h4>We turn creative ideas
+        into your business.</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur sequi ullam architecto aliquid!
+      </p>
+      <div class="main-header__buttons">
+        <button type="button" class="btn btn-pink rounded-pill">Our Story</button>
+        <button type="button" class="btn btn-violet rounded-pill">Read More</button>
+      </div>
+    </div>
+  </header>
+  <!-- /.header -->
+  <section class="section-watch">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-6">
+          <h3>Dream Big Inspire the World</h3>
+          <h4>We turn creative ideas
+            into your business</h4>
+          <nav class="section-tab">
+            <div class="nav nav-pills mb-3" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active rounded-pill"" id=" nav-webdesign-tab" data-toggle="tab"
+                href="#nav-webdesign" role="tab" aria-controls="nav-webdesign" aria-selected="true">Webdesign</a>
+              <a class="nav-item nav-link rounded-pill"" id=" nav-mobileapp-tab" data-toggle="tab" href="#nav-mobileapp"
+                role="tab" aria-controls="nav-mobileapp" aria-selected="false">Mobile app</a>
+              <a class="nav-item nav-link rounded-pill"" id=" nav-branding-tab" data-toggle="tab" href="#nav-branding"
+                role="tab" aria-controls="nav-branding" aria-selected="false">Branding</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active " id="nav-webdesign" role="tabpanel"
+              aria-labelledby="nav-webdesign-tab">
+              <p>Web design Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iure, quo!
+                Quod quibusdam sunt aperiam doloribus. Assumenda aut officiis deleniti aspernatur, vitae esse minima
+                atque, voluptates nam labore dolorum fugit architecto!</p>
+              <p><a href="#" class="btn btn-pink btn-shadow">Read more</a></p>
+            </div>
+            <div class="tab-pane fade " id="nav-mobileapp" role="tabpanel" aria-labelledby="nav-mobileapp-tab">
+              <p>Mobile App
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur repellat nemo voluptates natus
+                consectetur, quis quia ex esse optio nihil aut voluptatum, perferendis dicta incidunt. Voluptates
+                tempore
+                consequuntur quaerat expedita.</p>
+              <p><a href="#" class="btn btn-pink btn-shadow">Read more</a></p>
+            </div>
+            <div class="tab-pane fade" id="nav-branding" role="tabpanel" aria-labelledby="nav-branding-tab">
+              <p>Branding
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea beatae voluptates doloribus, ad, eum porro
+                eligendi quam nobis magnam aut doloremque explicabo vitae inventore nulla eius cupiditate! Repudiandae,
+                placeat natus.</p>
+              <p><a href="#" class="btn btn-pink btn-shadow">Read more</a></p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 text-right d-none d-md-block"><img src="img/watch.png" alt=""></div>
+      </div>
+  </section>
+  <!-- /.section-watch -->
+  <section class="achievement">
+    <div class="container">
+      <div class="row">
+        <div class="achievement__items col-md-4 text-center">
+          <p><i class="fas fa-bullhorn"></i></p>
+          <h4>500+</h4>
+          <h3><span>Successfully</span>
+            completed projects</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellendus id quidem non iste laudantium
+            aperiam quibusdam perspiciatis nulla, optio eligendi quae.</p>
+        </div>
+        <div class="achievement__items col-md-4 text-center">
+          <p><i class="fas fa-bullhorn"></i></p>
+          <h4>254+</h4>
+          <h3><span>Highly</span> specialised
+            employees</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellendus id quidem non iste laudantium
+            aperiam quibusdam perspiciatis nulla, optio eligendi quae.</p>
+        </div>
+        <div class="achievement__items col-md-4 text-center">
+          <p><i class="fas fa-bullhorn"></i></p>
+          <h4>45+</h4>
+          <h3><span>Awards</span>
+            around the world</h3>
+          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellendus id quidem non iste
+            laudantium
+            aperiam quibusdam perspiciatis nulla, optio eligendi quae.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.achievement -->
+  <section class="section-story">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-10 text-center">
+          <h3>Let's Grow Together</h3>
+          <h4>We turn creative ideas into your business.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Tempora at id quasi cum ad ipsum totam quam
+            nihil
+            quos a aliquam nobis quisquam tenetur dolor, dicta atque. Ducimus, ipsa delectus?</p>
+          <p><a href="#" class="btn btn-pink btn-shadow">Read more</a></p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /section-story -->
+
+  <section class="section-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-xl-6">
+          <h3>We are best and creative agency</h3>
+          <h4>We turn creative ideas
+            into your business</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis commodi enim minus eos officia atque
+            adipisci rerum ipsam facilis quibusdam debitis saepe, accusantium pariatur ipsum quaerat dolore expedita
+            eius libero.</p>
+          <div class="row">
+            <div class="col-6 section-services__cartitems">
+              <p><i class="far fa-comments"></i></p>
+              <h2>Graphic Design</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur a corrupti neque quidem doloribus
+                excepturi </p>
+              <p><a href="#" class="btn btn-pink btn-shadow">Read more</a></p>
+            </div>
+            <div class="col-6 section-services__cartitems">
+              <p><i class="fas fa-bullhorn"></i></p>
+              <h2>Graphic Design</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur a corrupti neque quidem doloribus
+                excepturi </p>
+              <p><a href="#" class="btn btn-pink btn-shadow">Read more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-12 order-first order-xl-last">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="videoPlayer" class="embed-responsive-item" src="https://www.youtube.com/embed/lJ87yD_8u3U"
+              allowfullscreen></iframe>
+            <div id="videoPlayBtn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /section-services -->
+
+  <section class="section-work">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-8 offset-md-2 text-center">
+          <h4>Our Recent Work</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus inventore accusantium a, similique iste
+            dolorem obcaecati eaque quaerat quos ab quam alias ipsum beatae eligendi maxime quibusdam impedit aspernatur
+            voluptatem.</p>
+          <nav class="section-tab">
+            <div class="nav nav-pills justify-content-center mb-3" id="nav-tab2" role="tablist">
+              <a class="nav-item nav-link active rounded-pill"" id=" nav-webdesign-tab2" data-toggle="tab"
+                href="#nav-webdesign2" role="tab" aria-controls="nav-webdesign2" aria-selected="true">Webdesign</a>
+              <a class="nav-item nav-link rounded-pill"" id=" nav-mobileapp-tab2" data-toggle="tab"
+                href="#nav-mobileapp2" role="tab" aria-controls="nav-mobileapp2" aria-selected="false">Mobile app</a>
+              <a class="nav-item nav-link rounded-pill"" id=" nav-branding-tab2" data-toggle="tab" href="#nav-branding2"
+                role="tab" aria-controls="nav-branding2" aria-selected="false">Branding</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent2">
+            <div class="tab-pane fade show active " id="nav-webdesign2" role="tabpanel"
+              aria-labelledby="nav-webdesign-tab2">
+              <div class="gallery text-center row">
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/1.jpg"><img src="img/gallery/1_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/2.jpg"><img src="img/gallery/2_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/3.jpg"><img src="img/gallery/3_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/4.jpg"><img src="img/gallery/4_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/5.jpg"><img src="img/gallery/5_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/6.jpg"><img src="img/gallery/6_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/7.jpg"><img src="img/gallery/7_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/8.jpg"><img src="img/gallery/8_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/9.jpg"><img src="img/gallery/9_s.jpg"
+                      alt=""></a></div>
+              </div>
+            </div>
+            <div class="tab-pane fade " id="nav-mobileapp2" role="tabpanel" aria-labelledby="nav-mobileapp-tab2">
+              <div class="gallery text-center row">
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/4.jpg"><img src="img/gallery/4_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/5.jpg"><img src="img/gallery/5_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/6.jpg"><img src="img/gallery/6_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/7.jpg"><img src="img/gallery/7_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/8.jpg"><img src="img/gallery/8_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/9.jpg"><img src="img/gallery/9_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/1.jpg"><img src="img/gallery/1_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/2.jpg"><img src="img/gallery/2_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/3.jpg"><img src="img/gallery/3_s.jpg"
+                      alt=""></a></div>
+              </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="nav-branding2" role="tabpanel" aria-labelledby="nav-branding-tab2">
+              <div class="gallery text-center row">
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/7.jpg"><img src="img/gallery/7_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/8.jpg"><img src="img/gallery/8_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/9.jpg"><img src="img/gallery/9_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/1.jpg"><img src="img/gallery/1_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/2.jpg"><img src="img/gallery/2_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/3.jpg"><img src="img/gallery/3_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/4.jpg"><img src="img/gallery/4_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/5.jpg"><img src="img/gallery/5_s.jpg"
+                      alt=""></a></div>
+                <div class="col-sm-4 gallery-items"> <a href="img/gallery/6.jpg"><img src="img/gallery/6_s.jpg"
+                      alt=""></a></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section-work -->
+
+  <section class="section-client">
+    <div class="container">
+      <div class="row ">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row align-items-center">
+                <div class="col-md-7 ">
+                  <h3>Our Happy Client
+                  </h3>
+                  <h4>Testimonials</h4>
+                  <blockquote class="blockquote">
+                    <p class="mt-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.
+                    </p>
+                    <footer class="blockquote-footer">Mr <cite title="Название источника">Adam Smith</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="col-md-5 text-center"><img src="img/client.png" alt=""></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h3>Our Happy Client
+                  </h3>
+                  <h4>Testimonials</h4>
+                  <blockquote class="blockquote">
+                    <p class="mt-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.
+                    </p>
+                    <footer class="blockquote-footer">Mr <cite title="Название источника">John Doe</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="col-md-5 text-center"><img src="img/client.png" alt=""></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h3>Our Happy Client
+                  </h3>
+                  <h4>Testimonials</h4>
+                  <blockquote class="blockquote">
+                    <p class="mt-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.
+                    </p>
+                    <footer class="blockquote-footer">Mr <cite title="Название источника">Jho Black</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="col-md-5 text-center"><img src="img/client.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section-client -->
+
+  <section class="section-form">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h4>Need Help?</h4>
+          <h5>Don't Forget to Contact With Us</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam impedit tempora blanditiis, possimus
+            quisquam sint dolorum tempore delectus. Doloribus voluptas ipsam perferendis asperiores, cumque laborum!
+            Illo placeat dolore mollitia labore.</p>
+          <form class="text-left">
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" class="form-control m-1" placeholder="Name">
+              </div>
+              <div class="col-md-5">
+                <input type="email" class="form-control m-1" placeholder="Email">
+              </div>
+              <div class="col-md-2 "><button type="submit" class="btn btn-shadow btn-violet m-1">submit</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section-form -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <nav class="col-6">
+              <h5>Company</h5>
+              <ul class="nav-link">
+                <li>About</li>
+                <li>Approach</li>
+                <li>Sustainability</li>
+                <li>Careers</li>
+                <li>News</li>
+              </ul>
+            </nav>
+            <nav class="col-6">
+              <h5>Company</h5>
+              <ul class="nav-link">
+                <li>About</li>
+                <li>Approach</li>
+                <li>Sustainability</li>
+                <li>Careers</li>
+                <li>News</li>
+              </ul>
+            </nav>
+            <nav class="col-6">
+              <h5>Company</h5>
+              <ul class="nav-link">
+                <li>About</li>
+                <li>Approach</li>
+                <li>Sustainability</li>
+                <li>Careers</li>
+                <li>News</li>
+              </ul>
+            </nav>
+            <nav class="col-6">
+              <h5>Company</h5>
+              <ul class="nav-link">
+                <li>About</li>
+                <li>Approach</li>
+                <li>Sustainability</li>
+                <li>Careers</li>
+                <li>News</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-6 footer__img">
+          <div class="row">
+            <div class="col-6"><img src="img/footer-img1.jpg" alt=""></div>
+            <div class="col-6"><img src="img/footer-img2.jpg" alt=""></div>
+            <div class="col-6"><img src="img/footer-img3.jpg" alt=""></div>
+            <div class="col-6"><img src="img/footer-img4.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /.footer -->
+
+  <div class="copyright ">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 ">
+          <nav>
+            <ul class="nav align-items-center justify-content-center">
+              <li class="nav-item"><span>&copy; 2022 Theme by psdfreebies.com</span></li>
+              <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Site Map</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- =====script===== -->
+  <script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+    }
+  </script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/d37eefa1f2.js"></script>
+  <script src="js/popper.min.js"> </script>
+  <script src="bootstrap/js/bootstrap.min.js"> </script>
+  <script src="js/baguetteBox.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

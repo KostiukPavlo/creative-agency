@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Poppins:300,400,600,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <style>
+        .preloader {
+            /*фиксированное позиционирование*/
+            position: fixed;
+            /* координаты положения */
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            /* фоновый цвет элемента */
+            background: #e0e0e0;
+            /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+            z-index: 1001;
+        }
+
+        .preloader__row {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            margin-top: -35px;
+            margin-left: -35px;
+            text-align: center;
+            animation: preloader-rotate 2s infinite linear;
+        }
+
+        .preloader__item {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            background-color: #337ab7;
+            border-radius: 100%;
+            width: 35px;
+            height: 35px;
+            animation: preloader-bounce 2s infinite ease-in-out;
+        }
+
+        .preloader__item:last-child {
+            top: auto;
+            bottom: 0;
+            animation-delay: -1s;
+        }
+
+        @keyframes preloader-rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes preloader-bounce {
+
+            0%,
+            100% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .loaded_hiding .preloader {
+            transition: 0.3s opacity;
+            opacity: 0;
+        }
+
+        .loaded .preloader {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/baguetteBox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Creative Agency</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""><span>BlueRex</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-center ml-auto">
+                    <li class="nav-item  active">
+                        <a class="nav-link " href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Faq</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!-- /.header -->
+
+    <section class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <article class="article__preview">
+                        <h2><a href="single.html">Lorem ipsum dolor sit</a></h2>
+                        <p><span class="article__data"><i class="far fa-calendar-alt"></i>06.05.2020</span></p>
+                        <div class="article__excert"><img src="" alt="">
+                            <p><a href="single.html"><img class="thumb" src="https://picsum.photos/id/125/250/170"
+                                        alt=""></a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+                                dolorem, voluptatibus accusamus quia id eligendi consequuntur doloribus accusantium
+                                tempore culpa libero? Deserunt, veritatis autem! Amet doloribus eum laudantium ipsam
+                                odio?</p>
+                            <p><a href="single.html" class="more">Read more</a></p>
+                        </div>
+                    </article>
+                    <article class="article__preview">
+                        <h2><a href="single.html">Lorem ipsum dolor sit</a></h2>
+                        <p><span class="article__data"><i class="far fa-calendar-alt"></i>06.05.2020</span></p>
+                        <div class="article__excert"><img src="" alt="">
+                            <p><a href="single.html"><img class="thumb" src="https://picsum.photos/id/25/250/170"
+                                        alt=""></a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+                                dolorem, voluptatibus accusamus quia id eligendi consequuntur doloribus accusantium
+                                tempore culpa libero? Deserunt, veritatis autem! Amet doloribus eum laudantium ipsam
+                                odio?</p>
+                            <p><a href="single.html" class="more">Read more</a></p>
+                        </div>
+                    </article>
+                    <article class="article__preview">
+                        <h2><a href="single.html">Lorem ipsum dolor sit</a></h2>
+                        <p><span class="article__data"><i class="far fa-calendar-alt"></i>06.05.2020</span></p>
+                        <div class="article__excert"><img src="" alt="">
+                            <p><a href="single.html"><img class="thumb" src="https://picsum.photos/id/15/250/170"
+                                        alt=""></a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+                                dolorem, voluptatibus accusamus quia id eligendi consequuntur doloribus accusantium
+                                tempore culpa libero? Deserunt, veritatis autem! Amet doloribus eum laudantium ipsam
+                                odio?</p>
+                            <p><a href="single.html" class="more">Read more</a></p>
+                        </div>
+                    </article>
+                    <article class="article__preview">
+                        <h2><a href="single.html">Lorem ipsum dolor sit</a></h2>
+                        <p><span class="article__data"><i class="far fa-calendar-alt"></i>06.05.2020</span></p>
+                        <div class="article__excert"><img src="" alt="">
+                            <p><a href="single.html"><img class="thumb" src="https://picsum.photos/id/1025/250/170"
+                                        alt=""></a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+                                dolorem, voluptatibus accusamus quia id eligendi consequuntur doloribus accusantium
+                                tempore culpa libero? Deserunt, veritatis autem! Amet doloribus eum laudantium ipsam
+                                odio?</p>
+                            <p><a href="single.html" class="more">Read more</a></p>
+                        </div>
+                    </article>
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#">Features</a>
+                            <span class="badge badge-primary badge-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#">Product</a>
+                            <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#"> Reviews</a>
+                            <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <nav class="col-6">
+                            <h5>Company</h5>
+                            <ul class="nav-link">
+                                <li>About</li>
+                                <li>Approach</li>
+                                <li>Sustainability</li>
+                                <li>Careers</li>
+                                <li>News</li>
+                            </ul>
+                        </nav>
+                        <nav class="col-6">
+                            <h5>Company</h5>
+                            <ul class="nav-link">
+                                <li>About</li>
+                                <li>Approach</li>
+                                <li>Sustainability</li>
+                                <li>Careers</li>
+                                <li>News</li>
+                            </ul>
+                        </nav>
+                        <nav class="col-6">
+                            <h5>Company</h5>
+                            <ul class="nav-link">
+                                <li>About</li>
+                                <li>Approach</li>
+                                <li>Sustainability</li>
+                                <li>Careers</li>
+                                <li>News</li>
+                            </ul>
+                        </nav>
+                        <nav class="col-6">
+                            <h5>Company</h5>
+                            <ul class="nav-link">
+                                <li>About</li>
+                                <li>Approach</li>
+                                <li>Sustainability</li>
+                                <li>Careers</li>
+                                <li>News</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-6 footer__img">
+                    <div class="row">
+                        <div class="col-6"><img src="img/footer-img1.jpg" alt=""></div>
+                        <div class="col-6"><img src="img/footer-img2.jpg" alt=""></div>
+                        <div class="col-6"><img src="img/footer-img3.jpg" alt=""></div>
+                        <div class="col-6"><img src="img/footer-img4.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+    <div class="copyright ">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <nav>
+                        <ul class="nav align-items-center justify-content-center">
+                            <li class="nav-item"><span>&copy; 2022 Theme by psd.com</span></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Site Map</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- =====script===== -->
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/d37eefa1f2.js"></script>
+    <script src="js/popper.min.js"> </script>
+    <script src="bootstrap/js/bootstrap.min.js"> </script>
+    <script src="js/baguetteBox.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
